@@ -21,7 +21,7 @@ func GenerateToken() string {
 	claims := &JWTClaim{
 		Username: user.Username,
 		StandardClaims: jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(1 * time.Minute).Unix(),
+			ExpiresAt: time.Now().Add(1 * time.Hour).Unix(),
 		},
 	}
 

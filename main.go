@@ -9,5 +9,5 @@ func main() {
 
 	router := app.Router()
 
-	router.Run("localhost:8080")
+	router.Run(":8080")
 }

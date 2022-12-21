@@ -18,7 +18,7 @@ func NewUserRepository(db *gorm.DB) *userrepository {
 	}
 }
 
-func (repository *userrepository) Register(user domain.Register) error {
+func (repository *userrepository) Register(user domain.User) error {
 	hashPassword, err := bcrypt.GenerateFromPassword([]byte(user.Password), 15)
 	if err != nil {
 		return err

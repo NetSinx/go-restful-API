@@ -16,7 +16,7 @@ func NewUserService(userRepo repository.UserRepository) *userservice {
 	}
 }
 
-func (service *userservice) Register(user domain.Register) error {
+func (service *userservice) Register(user domain.User) error {
 	err := service.UserRepository.Register(user)
 	if err != nil {
 		return errors.New("user cannot registered")

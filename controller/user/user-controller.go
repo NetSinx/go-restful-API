@@ -19,7 +19,7 @@ func NewUserController(userService service.UserService) *usercontroller {
 }
 
 func (controller *usercontroller) Register(ctx *gin.Context) {
-	var user domain.Register
+	var user domain.User
 
 	err := ctx.ShouldBindJSON(&user)
 	if err != nil {
